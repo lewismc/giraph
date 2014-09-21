@@ -58,7 +58,7 @@ import org.apache.log4j.Logger;
  * @param <E>  edge type
  */
 public abstract class GoraEdgeInputFormat
-  <I extends WritableComparable, E extends Writable>
+  <I extends WritableComparable<?>, E extends Writable>
   extends EdgeInputFormat<I, E> {
 
   /** Start key for querying Gora data store. */
@@ -84,13 +84,13 @@ public abstract class GoraEdgeInputFormat
   private static Class<?> KEY_FACTORY_CLASS;
 
   /** Data store used for querying data. */
-  private static DataStore DATA_STORE;
+  private static DataStore<?, ?> DATA_STORE;
 
   /** counter for iinput records */
   private static int RECORD_COUNTER = 0;
 
   /** Delegate Gora input format */
-  private static ExtraGoraInputFormat GORA_INPUT_FORMAT =
+  private static ExtraGoraInputFormat<?, ?> GORA_INPUT_FORMAT =
          new ExtraGoraInputFormat();
 
   /**

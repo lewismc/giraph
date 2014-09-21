@@ -1,14 +1,14 @@
 {
   "type": "record",
-  "name": "Vertex",
-  "namespace": "org.apache.giraph.gora.generated",
+  "name": "GVertex",
+  "namespace": "org.apache.giraph.io.gora.generated",
   "fields" : [
     {"name": "vertexId", "type": "long"},
     {"name": "value", "type": "float"},
     {"name": "edges", "type": {"type":"array", "items": {
-      "name": "Edge",
+      "name": "GEdge",
       "type": "record",
-      "namespace": "org.apache.giraph.gora.generated",
+      "namespace": "org.apache.giraph.io.gora.generated",
       "fields": [
         {"name": "vertexId", "type": "long"},
         {"name": "edgeValue", "type": "float"}

@@ -27,7 +27,7 @@ public abstract class KeyFactory {
   /**
    * Data store used for creating a new key.
    */
-  private DataStore dataStore;
+  private DataStore<?, ?> dataStore;
 
   /**
    * Builds a key from a string parameter.
@@ -40,7 +40,7 @@ public abstract class KeyFactory {
    * Gets the data store used in this factory.
    * @return the dataStore
    */
-  public DataStore getDataStore() {
+  public DataStore<?, ?> getDataStore() {
     return dataStore;
   }
 
@@ -48,7 +48,7 @@ public abstract class KeyFactory {
    * Sets the data store used in this factory.
    * @param dataStore the dataStore to set
    */
-  public void setDataStore(DataStore dataStore) {
+  public void setDataStore(DataStore<?, ?> dataStore) {
     this.dataStore = dataStore;
   }
 }
